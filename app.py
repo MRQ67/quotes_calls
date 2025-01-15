@@ -4,6 +4,10 @@ import os
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Welcome to the Flask API!"
+
 # Route to fetch a quote from ZenQuotes
 @app.route('/quote', methods=['GET'])
 def get_quote():
