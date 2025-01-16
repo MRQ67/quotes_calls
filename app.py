@@ -17,7 +17,7 @@ def home():
 def get_quote():
     try:
         # Fetch from ZenQuotes API
-        response = requests.get("https://api.quotable.io/random")
+        response = requests.get("https://quotes-api-self.vercel.app/quote")
         response.raise_for_status()
         return jsonify(response.json())
     except requests.exceptions.RequestException as e:
